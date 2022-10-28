@@ -417,8 +417,6 @@ Scenario 48 : Konsultan Melakukan Approval
 
 
 *** Keywords ***
-
-
 Scenario : User melakukan pencarian dengan data tidak sesuai
     event.Search Pencarian No Data    testing123
     event.Click Button Cari

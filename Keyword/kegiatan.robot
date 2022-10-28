@@ -326,8 +326,10 @@ Fill Laporan Keuangan
     Sleep    3s
     Input Text    ${inputSumberAnggaran}    test sumber Anggaran
     Input Text    ${inputNomorMAK}    MAK001
-    Input Text    ${inputJumlahPaguAnggaran}    10000000
-    Input Text    ${inputJumlahRealisasiAnggaran}    20000000
+    Input Text    ${inputNilaiKontrak}    10000000
+    Input Text    ${inputJumlahRealisasi}    20000000
+#    Input Text    ${inputJumlahPaguAnggaran}    10000000
+#    Input Text    ${inputJumlahRealisasiAnggaran}    20000000
     Execute Javascript
     ...    document.evaluate("//label[text()='Upload Rincian Realisasi Anggaran']/parent::*/parent::button", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null). snapshotItem(0).click();
     Choose File    ${fileUploadDropZone}    ${CURDIR}/Pdf/load.pdf

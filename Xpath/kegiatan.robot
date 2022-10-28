@@ -82,7 +82,9 @@ ${divItemJenisDokumentasi}              //ng-dropdown-panel/div/div[2]/div[1]
 ${inputSumberAnggaran}                  //textarea[contains(@placeholder,'Isi Sumber Anggaran')]
 ${inputNomorMAK}                        //input[contains(@placeholder,'Masukkkan Nomor MAK')]
 ${inputJumlahPaguAnggaran}              //label[text()='Jumlah Pagu Anggaran : ']/following-sibling::div/input
+${inputNilaiKontrak}                    //label[text()='Nilai Kontrak : ']/following-sibling::div/input
 ${inputJumlahRealisasiAnggaran}         //label[text()='Jumlah Realisasi Anggaran : ']/following-sibling::div/input
+${inputJumlahRealisasi}                 //label[text()='Jumlah Realisasi : ']/following-sibling::div/input
 ${inputTotalDurasi}                     //input[contains(@placeholder,'Masukkan Total Durasi')]
 ${inputJumlahPeserta}                   //label[text()='Jumlah Peserta :']/following-sibling::*/input
 ${dropdownAsalPeserta}                  //ng-select
