@@ -243,6 +243,7 @@ Click Laporan Kegiatan
 
 Click Buat Laporan Event
     Sleep    2s
+    Execute Javascript    window.scrollTo(0, window.scrollY+5000)
     Wait Until Element Is Visible    ${btnBuatLaporanEvent}    timeout=10s
     Click Element    ${btnBuatLaporanEvent}
 
