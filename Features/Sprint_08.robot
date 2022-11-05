@@ -163,24 +163,13 @@ Scenario 22 : Staff Membuat Laporan Kemajuan Event
     Lihat Detail Event
     pcu.Click Tab Laporan Event
     pcu.Click Buat Laporan Kemajuan Event
+    pcu.Input data Event Umum
+    pcu.Click Lanjut Data Pelaksanaan Event
+    pcu.Fill Data Event dan Peserta New
+    pcu.Fill Laporan Keuangan Event New
 
-Scenario 23 : Buat Laporan Substansi Event
-    Fill Data Umum Event
-    Click Lanjut Data Pelaksanaan Event
-    Fill Data Event dan Peserta
-
-Scenario 24 : Buat Laporan Keuangan Event
-    Fill Laporan Keuangan Event
-
-Scenario 25 : Buat Kata Pengantar Event
-    FIll Kata Pengantar Event
-
-Scenario 26 : Close Browser
+Scenario 23 : Close Browser
     Finish Testcase
-
-
-#Scenario 23 : Close Browser
-#    Finish Testcase
 ##################################
 #    Menu Pustaka
 ###################################

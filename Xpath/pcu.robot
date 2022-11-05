@@ -36,6 +36,7 @@ ${btnBuatLaporanKemajuanEvent}                  //button[text()='Buat Laporan Ke
 ${inputTemaEvent}                               //input[@placeholder='Tema Event']
 ${inputKodeEvent}                               //input[@placeholder='Kode Event']
 ${inputJumlahPesertaEvent}                      //label[text()='Jumlah Peserta Event']/following-sibling::div/input
+${inputRingkasanPelaksanaanEventNew}            (//ckeditor)[2]/div[2]/div[2]/div
 ${inputRingkasanPelaksanaanEvent}               (//ckeditor)[3]/div[2]/div[2]/div
 ${inputEvaluasiEvent}                           (//ckeditor)[4]/div[2]/div[2]/div
 ${inputKesimpulanDanSaranEvent}                 (//ckeditor)[5]/div[2]/div[2]/div

@@ -179,6 +179,12 @@ Click Buat Laporan Kemajuan Event
     Wait Until Element Is Visible    ${btnBuatLaporanKemajuanEvent}    timeout=30s
     Click Element    ${btnBuatLaporanKemajuanEvent}
 
+Input data Event Umum
+    Sleep    5s
+    Execute Javascript    window.scrollTo(0, window.scrollY+7000)
+    Sleep    3s
+    Click Element    ${btnLanjut}
+
 Fill Data Umum Event
     Sleep    5s
     Execute Javascript    window.scrollTo(0, window.scrollY+5000)
@@ -196,6 +202,30 @@ Fill Data Umum Event
 Click Lanjut Data Pelaksanaan Event
     Wait Until Element Is Visible    (//button[text()='Lanjut'])[2]    timeout=10s
     Click Element    (//button[text()='Lanjut'])[2]
+
+Fill Data Event dan Peserta New
+    Sleep    2s
+    Execute Javascript    window.scrollTo(0, window.scrollY+1000)
+    Sleep    2s
+    Input Text    ${inputJumlahPesertaEvent}    2
+    Execute Javascript    window.scrollTo(0, window.scrollY+10)
+    Sleep    2s
+    Input Text    ${inputRingkasanPelaksanaanEventNew}    Automation RIngkasan Pelaksanaan Event
+    Click Element    //button[text()=' Upload Dokumentasi Kegiatan ']
+    Choose File    ${fileUploadDropZone}    ${CURDIR}/Pdf/load.pdf
+    Input Text    ${inputJudulDokumenKegiatan}    judul dokumen kegiatan test
+    Input Text    ${inputDeskripsiDokumenKegiatan}    deskripsidokumen kegiatan test
+    Input Text    ${inputTanggalDokumenKegiatan}    2022-08-29
+    Input Text    ${inputTempatDokumenKegiatan}    Bekasi
+    Click Element    (//div[contains(@class,'ng-select-container')])
+    Click Element    ${divItemJenisDokumentasi}
+    Click Element    //label[text()='Simpan']
+    Sleep    2s
+    Execute Javascript
+    ...    document.evaluate("(//label[text()='Upload Lampiran'])[2]/parent::*/parent::*", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null). snapshotItem(0).click();
+    Choose File    ${fileUploadDropZone}    ${CURDIR}/Pdf/load.pdf
+    Click Element    //label[text()='Simpan']
+    Click Element    (//button[text()=' Lanjut '])[1]
 
 Fill Data Event dan Peserta
     Sleep    2s
@@ -234,6 +264,19 @@ Click Lanjut Data Event Dan Peserta
     Wait Until Element Is Visible    (//button[text()=' Lanjut '])[1]    timeout=10s
     Click Element    (//button[text()=' Lanjut '])[1]
     Sleep    5s
+
+Fill Laporan Keuangan Event New
+    Sleep    3s
+#    Input Text    ${inputSumberAnggaran}    test sumber Anggaran
+#    Input Text    ${inputNomorMAK}    MAK001
+#    Input Text    ${inputJumlahPaguAnggaran}    10000000
+#    Input Text    ${inputJumlahRealisasiAnggaran}    20000000
+    Execute Javascript
+    ...    document.evaluate("//label[text()='Upload Rincian Realisasi Anggaran']/parent::*/parent::button", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null). snapshotItem(0).click();
+    Choose File    ${fileUploadDropZone}    ${CURDIR}/Pdf/load.pdf
+    Click Element    (//label[text()='Simpan'])[2]
+    Sleep    2s
+    Click Element    //label[text()='Simpan']
 
 Fill Laporan Keuangan Event
     Sleep    3s
