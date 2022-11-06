@@ -1,4 +1,5 @@
 *** Variables ***
+${MenuMonev}                //div[@id='topnav-menu-content']/ul[1]/li[7]/a[1]
 ${pageMonev}            //label[text()='Output Kegiatan']
 ${pageLongTerm}         //label[text()='Longterm Outcome']
 ${pageMonevMidterm}     //label[text()='Midterm Outcome']
