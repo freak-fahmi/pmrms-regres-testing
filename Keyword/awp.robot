@@ -283,6 +283,42 @@ Input Data Pelaksanaan
     ...    document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).
     ...    snapshotItem(0).click();
 
+Input Data Pelaksanaan Jenis Kegiatan Fullboard
+#    ${text}=    Generate Random String    10    [LOWER]
+    Input Text    ${volumeEvent}    200
+    Input Text    ${tglMulai}    2022-04-30
+    Input Text    ${tglAkhir}    2022-05-30
+    Input Text    ${infoLainnya}    Automation Testing ${text}
+    Click Element    ${tambahLokasi}
+    Click Element    ${lblpilihProvinsi}
+    Wait Until Element Is Visible    ${clickAceh}    timeout=30s
+    Click Element    ${clickAceh}
+    Sleep    3s
+    Click Element    ${clickAceh}
+    Wait Until Element Is Visible    ${pilihkabkota}    timeout=30s
+    Click Element    ${pilihkabkota}
+#    Sleep    3s
+#    Click Element    ${combobox}
+#    Wait Until Element Is Visible    ${clickAcehBarat}    timeout=30s
+#    Click Element    ${clickAcehBarat}
+    Click Element    ${btnSimpanPopup}
+
+    Execute JavaScript    document.evaluate("${jenisKegiatan}",
+    ...    document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).
+    ...    snapshotItem(0).click();
+
+    Execute JavaScript    document.evaluate("${pilihJenisKegiatanFullboard}",
+    ...    document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).
+    ...    snapshotItem(0).click();
+
+#    Click Element    ${pilihJenisKegiatan}
+    Input Text    ${jmlnarasumber}    10
+    Input Text    ${asallembaga}    pendidikan
+    Input Text    ${narasumberLainnya}    fahmi
+    Execute JavaScript    document.evaluate("${btnLanjut}",
+    ...    document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).
+    ...    snapshotItem(0).click();
+
 Input Data Peserta
 #    ${text}=    Generate Random String    10    [LOWER]
     Input Text    ${jmlPeserta}    500
