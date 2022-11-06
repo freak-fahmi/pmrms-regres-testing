@@ -10,7 +10,7 @@ Click Menu Pustaka
     Click Element    ${menuPustaka}
 
 Verify Page Dokumen Umum
-    Wait Until Element Is Visible    ${verifyDokumenUmum}
+    Wait Until Element Is Visible    ${verifyDokumenUmum}   timeout=30s
     Page Should Contain Element    ${verifyDokumenUmum}
 
 Click Button Upload File

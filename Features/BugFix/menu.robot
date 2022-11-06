@@ -11,6 +11,8 @@ Resource            ../../Keyword/pustaka.robot
 Resource            ../../Keyword/monev.robot
 Resource            ../../Keyword/administrasi.robot
 Resource            ../../Keyword/konfigurasi.robot
+
+
 *** Test Cases ***
 ###################################
 #    Menu aktif
@@ -55,26 +57,45 @@ PMRMS-B-5 Scenario 10 : User Pilih menu Kegiatan , pilih button lihat
 PMRMS-B-5 Scenario 11 : User Pilih menu Event , pilih button lihat
     Click Menu Event
     Verify Page Event
-    Click Button Lihat Event
+    Click lihat button
 PMRMS-B-5 Scenario 12 : User Pilih menu Monev Output pilih target, pilih button edit
     Click Monev Output Target
     Click Button Edit
-# PMRMS-B-5 Scenario 13 : User Pilih menu Monev Output pilih hasil, pilih button edit
-
-
+PMRMS-B-5 Scenario 13 : User Pilih menu Monev Output pilih hasil, pilih button edit
+    User Pilih Output Hasil Monev
+    Click Button Edit
 PMRMS-B-5 Scenario 14 : User Pilih menu Monev Intermediate Outcome pilih target, pilih button edit
     Click Monev Intermediate Output Target
     Click Button Edit
-# PMRMS-B-5 Scenario 15 : User Pilih menu Monev Intermediate Outcome pilih hasil, pilih button editt
-
-
+PMRMS-B-5 Scenario 15 : User Pilih menu Monev Intermediate Outcome pilih hasil, pilih button editt
+    User Pilih Intermediate Outcome Hasil Monev
+    Click Button Edit
 PMRMS-B-5 Scenario 16 : User Pilih menu Monev Midterm Outcome pilih target, pilih button edit
     User Klik Monev Midterm Outcome Target
     Click Button Edit
-# PMRMS-B-5 Scenario 17 :User Pilih menu Monev Intermediate Outcome pilih hasil, pilih button edit
-
-
 PMRMS-B-5 Scenario 18 :User Pilih menu Monev Long Term Outcome pilih Target, pilih button edit
     User Klik Monev Longterm Outcome Target
     Click Button Edit
-# PMRMS-B-5 Scenario 18 :User Pilih menu Monev Long Term Outcome pilih Hasil, pilih button edit
+PMRMS-B-5 Scenario 19 :User Pilih menu Monev Long Term Outcome pilih Hasil, pilih button edit
+    User Pilih Longterm Outcome Hasil Monev
+    Click Button Edit
+Close Browser
+    Finish Testcase
+
+*** Keywords ***
+User Pilih Output Hasil Monev
+    Go To    http://pmrms.greatpmo.com/monev/monev-result-output/output
+    Wait Until Page Contains Element    css= .title-header  timeout=30s
+User Pilih Intermediate Outcome Hasil Monev
+    Go To    http://pmrms.greatpmo.com/monev/monev-result-intermediate/intermediate
+    Wait Until Page Contains Element    css= .title-header  timeout=30s
+User Pilih Midterm Outcome Hasil Monev
+    Go To    http://pmrms.greatpmo.com/monev/monev-result-midterm/Midterm
+    Wait Until Page Contains Element    css= .title-header  timeout=30s
+User Pilih Longterm Outcome Hasil Monev
+    Go To    http://pmrms.greatpmo.com/monev/monev-result-longterm/Longterm
+    Wait Until Page Contains Element    css= .title-header  timeout=30s
+Click lihat button
+    Wait Until Element Is Visible    //label[text()='Lihat']    timeout=30s
+    Click Element   //label[text()='Lihat']
+
