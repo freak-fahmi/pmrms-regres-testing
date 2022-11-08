@@ -48,5 +48,8 @@ Download File Awp
 Download Laporan Event
     Sleep    3s
     Execute Javascript    window.scrollTo(0, window.scrollY+5000)
-    Sleep    2s
+    Sleep    3s
+    Execute Javascript    window.scrollTo(0, window.scrollY+5000)
+    Sleep    3s
     click element   //label[text()='Download Laporan Event']
+    Sleep    5s

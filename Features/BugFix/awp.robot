@@ -33,4 +33,6 @@ Close Browser
 
 *** Keywords ***
 Download File Awp
+    Wait Until Element Is Visible    //label[text()='Download File AWP']    timeout=30s
     Click Element    //label[text()='Download File AWP']
+    Sleep    5s
