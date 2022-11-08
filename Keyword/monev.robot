@@ -6,6 +6,8 @@ Resource    ../Xpath/monev.robot
 
 
 *** Keywords ***
+Click menu monev
+    Click Element    ${MenuMonev}
 Click Monev Output Target
     Go To    http://pmrms.greatpmo.com/monev/list-monev/output
     Wait Until Element Is Visible    ${pageMonev}   timeout=30s
