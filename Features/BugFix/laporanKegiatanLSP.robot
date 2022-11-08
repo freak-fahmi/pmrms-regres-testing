@@ -7,7 +7,7 @@ Resource            ../../Keyword/kegiatan.robot
 
 *** Test Cases ***
 ###################################
-#    Laporan Event LSP
+#    Download Laporan Kegiatan
 ###################################
 PMRMS-B-2-Scenario : Login with username valid and password valid
     Given Login page is open
@@ -24,32 +24,13 @@ PMRMS-B-2-Scenario 2: User Search Kegiatan
     kegiatan.Search Pencarian by Nama Kegiatan      1.4.3.1
     kegiatan.Click Button Cari
 
-PMRMS-B-2-Scenario 3: Click Lihat Detail Kegiatan
-    Wait Until Element Is Visible    //label[text()='Lihat']    timeout=10s
-    Click Element    //label[text()='Lihat']
-
-PMRMS-B-2-Scenario 4: Click Laporan Kegiatan
-    Click Laporan Kegiatan
-
-PMRMS-B-2-Scenario 5: User pilih label laporan event
-    Wait Until Element Is Visible    //label[text()='Laporan nama3532']     timeout=30s
-    Click Element    //label[text()='Laporan nama3532']
-    Sleep    3s
-
-PMRMS-B-2 Scenario 6: User pilih button download laporan event
-    Download Laporan Event
+PMRMS-B-2-Scenario 2: User Download Kegiatan
+    Download Kegiatan
 
 Close Browser
     Finish Testcase
     
 *** Keywords ***
-Download File Awp
-    Click Element    //label[text()='Download File AWP']
-Download Laporan Event
-    Sleep    3s
-    Execute Javascript    window.scrollTo(0, window.scrollY+5000)
-    Sleep    3s
-    Execute Javascript    window.scrollTo(0, window.scrollY+5000)
-    Sleep    3s
-    click element   //label[text()='Download Laporan Event']
+Download Kegiatan
+    Click Element    (//button[contains(@class,'btn text-white')])[2]
     Sleep    5s
