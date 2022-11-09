@@ -5,7 +5,7 @@ Resource            ../../Keyword/browser.robot
 Resource            ../../Keyword/login.robot
 Resource            ../../Keyword/projectcomponent.robot
 Resource            ../../Keyword/awp.robot
-Resource    ../../Keyword/event.robot
+Resource            ../../Keyword/event.robot
 
 *** Test Cases ***
 ###################################
@@ -139,12 +139,6 @@ Resource    ../../Keyword/event.robot
     Go To     http://pmrms.greatpmo.com/administrasi/detail
     Sleep    3s
     [Teardown]    Finish Testcase
-
-
-
-
-
-
 
 *** Keywords ***
 
