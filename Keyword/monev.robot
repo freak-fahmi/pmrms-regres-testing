@@ -9,12 +9,12 @@ Resource    ../Xpath/monev.robot
 Click menu monev
     Click Element    ${MenuMonev}
 Click Monev Output Target
-    Go To    http://pmrms.greatpmo.com/monev/list-monev/output
+    Go To    https://pmrms.kemenag.go.id/monev/list-monev/output
     Wait Until Element Is Visible    ${pageMonev}   timeout=30s
     Page Should Contain Element    ${pageMonev}
 
 Click Monev Longterm target
-    Go To    http://pmrms.greatpmo.com/monev/monev-longterm/Longterm
+    Go To    https://pmrms.kemenag.go.id/monev/monev-longterm/Longterm
     Wait Until Element Is Visible    ${pageLongTerm}
 #    Page Should Contain Element    ${pageLongTerm}
 Click View Target
@@ -64,15 +64,15 @@ Click Button Simpan
                                     ...    document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).
                                     ...    snapshotItem(0).click();
 Click Monev Midterm Output Target
-    Go To    http://pmrms.greatpmo.com/monev/monev-midterm/Midterm
+    Go To    https://pmrms.kemenag.go.id/monev/monev-midterm/Midterm
     Wait Until Element Is Visible    ${pageMonevMidterm}   timeout=30s
     Page Should Contain Element     ${pageMonevMidterm}
 Click Monev Intermediate Output Target
-    Go To    http://pmrms.greatpmo.com/monev/monev-intermediate/intermediate
+    Go To    https://pmrms.kemenag.go.id/monev/monev-intermediate/intermediate
     Wait Until Element Is Visible    ${pageMonevIntermediate}   timeout=30s
     Page Should Contain Element    ${pageMonevIntermediate}
 Click Edit Monev output
-    go to    http://pmrms.greatpmo.com/monev/list-monev/output
+    go to    https://pmrms.kemenag.go.id/monev/list-monev/output
     sleep    3s
     click element       ${btnEdit}
 Click Button Kembali
@@ -84,17 +84,17 @@ Input Tambah Target Output Kegiatan
     click element    ${pilihKomponen}
 
 User Klik Monev Output Target
-    Go To   http://pmrms.greatpmo.com/monev/list-monev/output
+    Go To   https://pmrms.kemenag.go.id/monev/list-monev/output
     Wait Until Element Is Visible    //label[text()='Daftar Target Output Kegiatan']     timeout=30s
 User Klik Monev Intermediate Outcome Target
-    Go To   http://pmrms.greatpmo.com/monev/monev-intermediate/intermediate
+    Go To   https://pmrms.kemenag.go.id/monev/monev-intermediate/intermediate
     Wait Until Element Is Visible    //label[text()='Daftar Target Intermediate Outcome']     timeout=30s
 User Klik Monev Midterm Outcome Target
-    Go To   http://pmrms.greatpmo.com/monev/monev-midterm/Midterm
+    Go To   https://pmrms.kemenag.go.id/monev/monev-midterm/Midterm
     Wait Until Element Is Visible    //label[text()='Daftar Target Midterm Outcome']     timeout=30s
 
 User Klik Monev Longterm Outcome Target
-    Go To   http://pmrms.greatpmo.com/monev/monev-longterm/Longterm
+    Go To   https://pmrms.kemenag.go.id/monev/monev-longterm/Longterm
     Wait Until Element Is Visible    //label[text()='Daftar Target Longterm Outcome']     timeout=30s
 User Search Monev Outcome Target
      Click Element    //span[text()='2023']
@@ -158,8 +158,10 @@ User Kik Button Lanjut
 User Input Pertanyaan
     Click Element       //button[text()=' Tambah Pertanyaan (Ya/Tidak) ']
     Click Element       (//div[@role='combobox']//input)[3]
-    Wait Until Element Is Visible    //span[text()='Buat baru']     timeout=30s
-    Click Element       //span[text()='Buat baru']
+    Sleep    3s
+    Execute JavaScript              document.evaluate("${pilihPertanyaan}",
+                                    ...    document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).
+                                    ...    snapshotItem(0).click();
     Sleep    3s
 User Klik Button Simpan
     Execute JavaScript              document.evaluate("${btnSimpan}",

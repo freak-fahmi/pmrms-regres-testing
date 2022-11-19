@@ -2,7 +2,7 @@
 Library  SeleniumLibrary
 
 *** Variables ***
-${chrome_browser}           http://pmrms.greatpmo.com/admin/login
+${chrome_browser}           https://pmrms.kemenag.go.id/admin/login
 
 *** Keywords ***
 Open Browser

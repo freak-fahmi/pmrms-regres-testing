@@ -79,15 +79,15 @@ Scenario PMRMS -410: Coordinator Melakukan Quality Entry Kontrak
 ## Buat Concept Note
 #####################
 #
-#Scenario 1: Login valid as Konsultan
-#    Login valid as Konsultan
+Scenario 1: Login valid as Konsultan
+    Login valid as Konsultan
 #
-#Scenario 2 : Buat Concept Note
-#    Buat Concept Note    astswkll
-#    pcu.Fill Data Umum
-#    # rubah tanggal mulai dan akhir kegiatan di keyword ini
-#    Fill Data Pelaksanaan    PCU    Sulawesi Tengah    Asep Sunarso
-#    Fill Data Event
+Scenario 2 : Buat Concept Note
+    Buat Concept Note    astswkll
+    pcu.Fill Data Umum
+    # rubah tanggal mulai dan akhir kegiatan di keyword ini
+    Fill Data Pelaksanaan    PCU    Sulawesi Tengah    Asep Sunarso
+    Fill Data Event
 #
 #Scenario 3: Close Browser
 #    Finish Testcase

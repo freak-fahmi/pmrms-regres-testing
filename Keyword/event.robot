@@ -24,7 +24,7 @@ Click Button Cari
 
 Search Pencarian by Nama Kegiatan
     [Arguments]    ${namaKegiatan}
-    Go To    http://pmrms.greatpmo.com/activity/event
+    Go To    https://pmrms.kemenag.go.id/activity/event
     Sleep    3s
     Wait Until Element Is Visible    ${inputCari}    timeout=30s
     Input Text    ${inputCari}    ${namaKegiatan}
@@ -32,7 +32,7 @@ Search Pencarian by Nama Kegiatan
 
 Search Pencarian by Kode Kegiatan
     [Arguments]    ${kodeKegiatan}
-    Go To    http://pmrms.greatpmo.com/activity/event
+    Go To    https://pmrms.kemenag.go.id/activity/event
     Sleep    2s
     Wait Until Element Is Visible    ${inputCari}    timeout=30s
     Input Text    ${inputCari}    ${kodeKegiatan}
